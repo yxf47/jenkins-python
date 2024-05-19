@@ -9,10 +9,7 @@ pipeline {
                     if (!pipInstalled) {
                         // Install pip
                         sh 'curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py'
-                        sh 'python3 get-pip.py --user'
-                        // Add pip to PATH
-                        sh 'echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc'
-                        sh 'source ~/.bashrc'
+                        sh 'sudo python3 get-pip.py'
                     }
                 }
             }
